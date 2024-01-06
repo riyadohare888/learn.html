@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Form</title>
+    <script>
+        function validate() {
+            if (document.form.name.value == "") {
+                alert("please fill the details!");
+                document.form.name.focus();
+                return false;
+            }
+
+            if (document.form.fname.value == "") {
+                alert("please fill the details!");
+                document.form.fname.focus();
+                return false;
+            }
+
+            if (document.form.mname.value == "") {
+                alert("please fill the details!");
+                document.form.mname.focus();
+                return false;
+            }
+
+            if (document.form.adhar.value == "") {
+                alert("please fill the details!");
+                document.form.adhar.focus();
+                return false;
+            }
+
+            if (document.form.date.value == "") {
+                alert("please fill the details!");
+                document.form.date.focus();
+                return false;
+            }
+
+            if (document.form.pin.value == "" || isNAN(document.form.pin.value) ||
+                document.form.pin.value.lenght != 6) {
+                alert("please fill correct pincode!");
+                document.form.pin.focus();
+                return false;
+            }
+
+            if (document.form.paper.value == "") {
+                alert("please fill the details!");
+                document.form.paper.focus();
+                return false;
+            }
+
+            return true;
+
+        }
+    </script>
+    <style>
+        .body {
+            background: url("https://www.qualtrics.com/m/assets/wp-content/uploads/2020/06/customer-care-1.jpg") no-repeat left top;
+            color: whitesmoke;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        
+        .border {
+            border: 10px groove skyblue;
+            width: 50%;
+        }
+        
+        .nav {
+            margin: 0%;
+            padding: 10px 15px;
+            width: 100%;
+            background-color: antiquewhite;
+            text-align: center;
+        }
+        
+        .nav a {
+            display: inline;
+            color: blue;
+            padding: 5px 10px;
+            text-decoration: none;
+            text-align: center;
+        }
+        
+        .nav a:hover {
+            background-color: blueviolet;
+            color: beige;
+            padding: 8px 12px;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+
+<body class="border">
+    <div class="nav">
+        <a href="C:\Users\Dohare Ji\Desktop\code\html.html">Home</a>
+    </div>
+    <form action="submit.html" name="form" onsubmit="return(validate());" class="body">
+        <fieldset>
+            <legend>customer Details</legend>
+            <table>
+                <tr>
+                    <td><label for="name">Name</label></td>
+                    <td><input type="text" id="name" placeholder="type your name"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="fname"> Father Name</label></td>
+                    <td><input type="text" id="fname" placeholder="type your fathers name"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="mname"> Mother Name</label></td>
+                    <td><input type="text" id="mname" placeholder="type your mother name"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="adhar"> Aadhar</label></td>
+                    <td><input type="text" id="adhar" placeholder="aadhar no." maxlenghth="12"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="date">D:O:B</label></td>
+                    <td><input type="date" id="date"></td>
+                </tr>
+                <tr>
+                    <td><label for="pin">Contact no.</label></td>
+                    <td><input type="text" id="pin" name="pin" maxlength="10" placeholder="8433265174"></td>
+                </tr>
+
+                <tr>
+                    <td><label>Gender</label></td>
+                    <td><input type="radio" id="male" name="gender">
+                        <label for="male">Male</label>
+                        <input type="radio" id="F" name="gender">
+                        <label for="F">Female</label>
+                        <input type="radio" id="O" name="gender">
+                        <label for="O">Other</label></td>
+                </tr>
+
+                <tr>
+                    <td><label>Category</label></td>
+                    <td><select>
+                <option>General</option>
+                <option>SC\ST</option>
+                <option>OBC</option>
+            </select></td>
+                </tr>
+
+                <tr>
+                    <td><label>Where you want to go?</label></td>
+                    <td><input type="radio" id="10">
+                        <label for="10">India</label>
+                        <input type="radio" id="12">
+                        <label for="12">Foreign country</label></td>
+                </tr>
+
+                <tr>
+                    <td><label>Tour you want?</label></td>
+                    <td><input type="checkbox" id="it">
+                        <label for="it">cultural</label>
+                        <input type="checkbox" id="mec">
+                        <label for="mec">Heritage</label>
+                        <input type="checkbox" id="auto">
+                        <label for="auto">Educational</label>
+                        <input type="checkbox" id="cse">
+                        <label for="cse">Family</label>
+                        <input type="checkbox" id="cse">
+                        <label for="Adventure">Adventure</label>
+                        <input type="checkbox" id="cse">
+                        <label for="Couple">Couple</label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="mail">Email</label></td>
+                    <td><input type="email" id="mail" placeholder="xyn@gmail.com"></td>
+                </tr>
+
+                <tr>
+                    <td><label>your needs?</label></td>
+                    <td><textarea></textarea></td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <labelfor="paper">Documents</label>
+                    </td>
+                    <td><input type="file" id="paper" name="paper" multiple></td>
+                </tr>
+
+                <tr>
+                    <td><label for="sign">Signature</label></td>
+                    <td><input type="file" id="sign"></td>
+                </tr>
+
+                <tr>
+                    <td><input type="checkbox"> I agree for all that mention above</td>
+                </tr>
+
+                <tr>
+                    <td><input type="submit"></td>
+                </tr>
+                <tr>
+                    <td><input type="reset"></td>
+                </tr>
+
+            </table>
+        </fieldset>
+    </form>
+</body>
+
+</html>
